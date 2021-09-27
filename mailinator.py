@@ -4,8 +4,9 @@ import webbrowser
 
 
 PATH_TO_CHROME = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
+SHORTCUT_VAL = 'ctrl+alt+p'
 
-keyboard.add_hotkey('ctrl+alt+p', lambda: print('ctrl + alt + p pressed - opening mailinator'))
+keyboard.add_hotkey(SHORTCUT_VAL, lambda: print('ctrl + alt + p pressed - opening mailinator'))
 
 def on_load():
     print("Does this happen")
@@ -27,5 +28,5 @@ def on_load():
         print("Not Mailinator email!")
 
 
-keyboard.add_hotkey('ctrl+alt+p', on_load)
+keyboard.add_hotkey(SHORTCUT_VAL, on_load)
 keyboard.wait()
