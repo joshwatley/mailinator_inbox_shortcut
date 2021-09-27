@@ -9,7 +9,6 @@ SHORTCUT_VAL = 'ctrl+alt+p'
 keyboard.add_hotkey(SHORTCUT_VAL, lambda: print('ctrl + alt + p pressed - opening mailinator'))
 
 def on_load():
-    print("Does this happen")
     win32clipboard.OpenClipboard()
     data = win32clipboard.GetClipboardData()
     win32clipboard.CloseClipboard()
